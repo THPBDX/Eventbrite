@@ -16,14 +16,12 @@ ActiveRecord::Schema.define(version: 2019_02_11_152613) do
   enable_extension "plpgsql"
 
   create_table "attendances", force: :cascade do |t|
-    t.string "stripe_custor_id"
+    t.string "stripe_customer_id"
     t.bigint "participant_id"
-    t.bigint "organiser_id"
     t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_attendances_on_event_id"
-    t.index ["organiser_id"], name: "index_attendances_on_organiser_id"
     t.index ["participant_id"], name: "index_attendances_on_participant_id"
   end
 
@@ -34,8 +32,10 @@ ActiveRecord::Schema.define(version: 2019_02_11_152613) do
     t.text "description"
     t.integer "price"
     t.string "location"
+    t.bigint "organiser_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["organiser_id"], name: "index_events_on_organiser_id"
   end
 
   create_table "users", force: :cascade do |t|
