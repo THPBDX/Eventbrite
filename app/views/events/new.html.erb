@@ -1,33 +1,35 @@
 <html>
 <body>
-  <div class="all-new">
+  <div class="container">
+        <%= form_tag "/events", method: "post" do %>
+        <br>
 
-    <%= form_tag "/events", method: "post" do %>
-    <br>
-    <h6><%= label_tag 'Date de début' %></h6>
-    <%= text_field_tag 'start_date' %>
-    <br>
+            <h6><%= label_tag 'Date de l\'événement' %></h6>
+            <%= text_field_tag 'start_date' %>
+            <br><br>
 
-    <h6><%= label_tag 'Durée' %></h6>
-    <%= text_area_tag 'duration' %>
-    <br>
+            <h6><%= label_tag 'Durée' %></h6>
+            <%= text_field_tag 'duration' %>
+            <br><br>
 
-    <h6><%= label_tag 'Titre' %></h6>
-    <%= text_field_tag 'title' %>
-    <br>
+            <h6><%= label_tag 'Titre' %></h6>
+            <%= text_field_tag 'title' %>
+            <br><br>
 
-    <h6><%= label_tag 'Description' %></h6>
-    <%= text_area_tag 'description' %>
-    <br>
-    <h6><%= label_tag 'Prix' %></h6>
-    <%= text_field_tag 'price' %>
-    <br>
-    <h6><%= label_tag 'Lieu' %></h6>
-    <%= text_field_tag 'location' %>
-    <br>
-    
-    <%= submit_tag "Créer évènement" %>
-    <% end %>
-  </div>
+            <h6><%= label_tag 'Description' %></h6>
+            <%= text_area_tag 'description' %>
+            <br><br>
+            <h6><%= label_tag 'Prix de la participation' %></h6>
+            <%= text_field_tag 'price' %>
+            <br><br>
+            <h6><%= label_tag 'Lieu de l\'événement' %></h6>
+            <%= text_field_tag 'location' %>
+            <br><br>
+        </div>
+        <h6><%= submit_tag "HOP LA!" %></h6>
+        <% end %>
+    </div>
+</div>
+</div>
 </body>
 </html>

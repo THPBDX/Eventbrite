@@ -1,37 +1,38 @@
-<br><h2>Sign up</h2><br>
+<br><h2>Sign up</h2>
+<h5><small>Tell us more about yourself</small></h5>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="field">
-  <%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-</div>
-<div class="field"><br />
-  <%= f.label :first_name %>
+  <h6><%= f.label :first_name %></h6><br>
   <%= f.text_field :first_name, autofocus: true, autocomplete: "Prénom" %>
-</div>
-<div class="field"><br />
-  <%= f.label :last_name %>
+</div><br>
+<div class="field">
+  <h6><%= f.label :last_name %></h6><br>
   <%= f.text_field :last_name, autofocus: true, autocomplete: "Nom" %>
-</div>
-<div class="field"><br />
-  <%= f.label :description %>
-  <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
-</div>
-<div class="field"><br />
-  <%= f.label :password %>
+</div><br>
+<div class="field">
+  <h6><%= f.label :email %></h6><br>
+  <%= f.email_field :email, autofocus: true, autocomplete: "Email" %>
+</div><br>
+<div class="field">
+  <h6><%= f.label :description %></h6><br>
+  <%= f.text_field :description, autofocus: true, autocomplete: "Description" %>
+</div><br>
+<div class="field">
+  <h6><%= f.label :password %></h6>
   <% if @minimum_password_length %>
   <em>(<%= @minimum_password_length %> characters minimum)</em>
-  <% end %><br />
-  <%= f.password_field :password, autocomplete: "new-password" %>
-</div>
+  <% end %><br>
+  <%= f.password_field :password, autocomplete: "Mot de passe" %>
+</div><br>
 <div class="field">
-  <%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-</div>
+  <h6><%= f.label :password_confirmation %></h6><br>
+  <%= f.password_field :password_confirmation, autocomplete: "Confirmation du mot de passe" %>
+</div><br>
 <div class="actions">
-  <%= f.submit "Sign up" %>
+  <%= f.submit "S'inscrire" %>
 </div>
 <% end %>
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <br><br>
-<h2><small class="text-muted">Welcome sur Eventbrite! 😊</small></h2>
+<h1><small class="text-muted">Bienvenue sur Eventbrite! 😊</small></h1>
 <br>
 
 <body>
-  <h3><%= link_to("Crée ton évènement dans ta ville !", "/events/new") %></h3>
+  <h4><%= link_to("➡️ Clic ici pour créer un événement dans ta ville ! ⬅️", "/events/new") %></h4>
   <br><br><br>
   <div class="container">
     <% Event.all.each do |event| %>
