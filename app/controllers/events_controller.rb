@@ -11,7 +11,8 @@ class EventsController < ApplicationController
   def show
     @event=Event.find(params[:id])
     @end_date = @event.start_date + @event.duration*60
-    @participants = User.where(participated_events: @event)
+    @participants = Attendance.where(event: @event)
+    puts @participants
     @participants_count = @participants.count
   end
 
