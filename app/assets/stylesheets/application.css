@@ -19,6 +19,7 @@
 p {
 	margin: 30px;
 	display: flex;
+	text-align: center;
 }
 
 .navbar {
@@ -42,4 +43,8 @@ input[type=submit] {
 input[type=submit]:active {
 	background-color: #e6e5e5;
 	border-radius: 2px;
+}
+
+.container{
+	width: 100%;
 }

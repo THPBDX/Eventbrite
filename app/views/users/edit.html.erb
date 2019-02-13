@@ -4,7 +4,7 @@
     <% if @user != nil %>
       <% if @user.errors.any? %>
       <br>
-    <h6>Oups, nous n'avons pas réussi à éditer ce user pour la (ou les) raison(s) suivante(s) :</h6>
+    <h6>Oups, nous n'avons pas réussi à éditer le profil de cet utilisateur pour la (ou les) raison(s) suivante(s) :</h6>
     <ul>
       <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
