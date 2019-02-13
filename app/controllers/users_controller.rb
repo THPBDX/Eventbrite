@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :authenticate_user_id
+  before_action :authenticate_user_id, except: [:show]
+
 
 
   def show
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
 
   def authenticate_user_id
     unless current_user.id == params[:id]
-      redirect_to 'registrations/new'
+      redirect_to '/users/sign_up'
     end
   end
 

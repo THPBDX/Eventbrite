@@ -3,7 +3,14 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :first_name, :last_name, :description, :password])
+
+  end
   # prepend_before_action :require_no_authentication, only: :cancel
 
   # GET /resource/sign_up
@@ -13,7 +20,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-      @user=User.create!(email: params[:email],first_name: params[:first_name],last_name: params[:last_name], password: params[:password], description: params[:description])
+    @user=User.create!(email: params[:email],first_name: params[:first_name],last_name: params[:last_name], password: params[:password], description: params[:description])
   end
 
   # GET /resource/edit
