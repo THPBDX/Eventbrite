@@ -1,0 +1,33 @@
+<html>
+<body>
+  <div class="all-new">
+
+    <%= form_tag "/events", method: "post" do %>
+    <br>
+    <h6><%= label_tag 'Date de début' %></h6>
+    <%= text_field_tag 'start_date' %>
+    <br>
+
+    <h6><%= label_tag 'Durée' %></h6>
+    <%= text_area_tag 'duration' %>
+    <br>
+
+    <h6><%= label_tag 'Titre' %></h6>
+    <%= text_field_tag 'title' %>
+    <br>
+
+    <h6><%= label_tag 'Description' %></h6>
+    <%= text_area_tag 'description' %>
+    <br>
+    <h6><%= label_tag 'Prix' %></h6>
+    <%= text_field_tag 'price' %>
+    <br>
+    <h6><%= label_tag 'Lieu' %></h6>
+    <%= text_field_tag 'location' %>
+    <br>
+    
+    <%= submit_tag "Créer évènement" %>
+    <% end %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<br><br>
+<h2><small class="text-muted">Welcome sur Eventbrite! 😊</small></h2>
+<br>
+
+<body>
+  <h3><%= link_to("Crée ton évènement dans ta ville !", "/events/new") %></h3>
+  <br><br><br>
+  <div class="container">
+    <% Event.all.each do |event| %>
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+        <div class="card bg-secondary mb-3" style="width: 15rem;">
+          <div class="card-header"><%= link_to(event.title, "/events/#{event.id}") %></div>
+          <div class="card-body">
+            <h5 class="card-text"> <%=event.start_date %></h5>
+            <h6 class="card-text">Créé par <%=event.organiser.first_name %></h6>
+          </div>
+        </div>
+      </div>
+      <%  end  %>
+    </div>
+  </div>
+</body>
+</html>

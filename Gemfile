@@ -74,3 +74,5 @@ gem 'table_print'
 gem 'shotgun'
 
 gem 'devise'
+
+gem 'bcrypt'
