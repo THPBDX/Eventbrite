@@ -14,12 +14,11 @@
  *= require_self
  */
 
-* { outline: none; }
+* { outline: none; text-align: center; font: "Nunito Sans"; }
 
 p {
 	margin: 30px;
 	display: flex;
-	text-align: center;
 }
 
 .navbar {
@@ -33,27 +32,14 @@ p {
 
 .field {
 	margin: auto;
-	text-align: center;
-	outline: 10px;
-}
-
-h2 {
-	text-align: center;
-}
-
-.actions {
-	text-align: center;
-	font: "Nunito Sans";
 }
 
 input[type=submit] {
-	font: "Nunito Sans";
 	background-color: #e6e5e5;
 	border-radius: 2px;
 }
 
 input[type=submit]:active {
-	font: "Nunito Sans";
 	background-color: #e6e5e5;
 	border-radius: 2px;
 }
