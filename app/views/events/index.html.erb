@@ -14,7 +14,7 @@
         <div class="card bg-secondary mb-3" style="width: 15rem;">
           <div class="card-header"><%= link_to(event.title, "/events/#{event.id}") %></div>
           <div class="card-body">
-            <h5 class="card-text"> <%=event.start_date %></h5>
+            <h5 class="card-text"> <%=event.start_date.to_date.strftime('%d, %B, %y')  %></h5>
             <h6 class="card-text">Créé par <%=event.organiser.first_name %></h6>
           </div>
         </div>
