@@ -20,25 +20,25 @@
     <div class="navbar-item" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <%= link_to "Créer un évènement" %>
+          <%= link_to "Create an event" %>
         </li>
         <li class="nav-item">
-          <li class="nav-item">
-            <%= link_to "Mon profil", "/users/edit" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Se déconnecter", "/users/sign_out" %>
-          </li>
-          <% else %>
-          <li class="nav-item">
-            <%= link_to "Se connecter", "/users/sign_in" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "S'inscrire", "/users/sign_up" %>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <%= yield %>
-  </body>
-  </html>
+          <%= link_to "My profile", "/users/edit" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up", "/users/sign_up" %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", "/users/sign_in" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "Logout", "/users/sign_out" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <%= yield %>
+</body>
+</html>
