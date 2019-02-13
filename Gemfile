@@ -74,4 +74,6 @@ gem 'shotgun'
 
 gem 'devise'
 
+gem 'bcrypt'
+
 gem 'stripe'

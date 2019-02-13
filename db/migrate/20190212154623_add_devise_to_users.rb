@@ -47,22 +47,22 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
   end
 
   def self.down
-      #raise ActiveRecord::IrreversibleMigration
+    #raise ActiveRecord::IrreversibleMigration
 
-      # remove_index :users, :email
-      remove_index :users, :reset_password_token
+    # remove_index :users, :email
+    remove_index :users, :reset_password_token
 
-      change_table :users do |t|
-        ## Database authenticatable
-        t.change :email, :string
-        t.change :encrypted_password, :string
+    change_table :users do |t|
+      ## Database authenticatable
+      t.change :email, :string
+      t.change :encrypted_password, :string
 
-        ## Recoverable
-        t.remove :reset_password_token
-        t.remove :reset_password_sent_at
+      ## Recoverable
+      t.remove :reset_password_token
+      t.remove :reset_password_sent_at
 
-        ## Rememberable
-        t.remove :remember_created_at
-      end
+      ## Rememberable
+      t.remove :remember_created_at
     end
+  end
 end

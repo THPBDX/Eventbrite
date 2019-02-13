@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  resources :events
-  resources :users
+
+  resources :users, only: [:index, :show]
+  resources :events, only: [:index, :show, :new]
   resources :charges
-  get '/home', to: 'event#index'
+
+  root 'events#index'
+  
 end

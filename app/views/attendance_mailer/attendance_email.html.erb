@@ -4,13 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Salut <%= @attendance.organiser.first_name %> !</h1>
+    <h1>Salut <%= @event.organiser.first_name %> !</h1>
     <p>
       Vous avez un nouveau participant à votre évènement.
       Son prénom : <%= @attendance.participant.first_name %>
       Son nom : <%= @attendance.participant.last_name %>
       Sa date d'inscription : <%= @attendance.created_at %>
     </p>
-    <p> À très vite sur monsite.fr !
+    <p> À très vite sur Eventbrite ! </p>
   </body>
 </html>

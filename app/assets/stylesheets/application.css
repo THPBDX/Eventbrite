@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+* { outline: none; }
+
+p {
+	margin: 30px;
+	display: flex;
+	text-align: center;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-item {
+	justify-content: flex-end;
+}
+
+.field {
+	margin: auto;
+	text-align: center;
+	outline: 10px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.actions {
+	text-align: center;
+	font: "Nunito Sans";
+}
+
+input[type=submit] {
+	font: "Nunito Sans";
+	background-color: #e6e5e5;
+	border-radius: 2px;
+}
+
+input[type=submit]:active {
+	font: "Nunito Sans";
+	background-color: #e6e5e5;
+	border-radius: 2px;
+}
