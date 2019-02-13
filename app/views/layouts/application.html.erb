@@ -22,9 +22,12 @@
         <li class="nav-item">
           <%= link_to "Create an event", "/events/new" %>
         </li>
+        <% if current_user == nil %>
+        <% else %>
         <li class="nav-item">
           <%= link_to "My profile", "/users/#{current_user.id}" %>
         </li>
+        <% end %>
         <li class="nav-item">
           <%= link_to "Sign up", "/users/sign_up" %>
         </li>
