@@ -26,19 +26,19 @@
           <li class="nav-item">
             <%= link_to "Mon profil", "/users/edit" %>
           </li>
-            <li class="nav-item">
-          <%= link_to "Se déconnecter", "/users/sign_out" %>
+          <li class="nav-item">
+            <%= link_to "Se déconnecter", "/users/sign_out" %>
           </li>
           <% else %>
-            <li class="nav-item">
-          <%= link_to "Se connecter", "/users/sign_in" %>
+          <li class="nav-item">
+            <%= link_to "Se connecter", "/users/sign_in" %>
           </li>
-            <li class="nav-item">
-          <%= link_to "S'inscrire", "/users/sign_up" %>
+          <li class="nav-item">
+            <%= link_to "S'inscrire", "/users/sign_up" %>
           </li>
-      </ul>
-    </div>
-  </nav>
-  <%= yield %>
-</body>
-</html>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+  </html>

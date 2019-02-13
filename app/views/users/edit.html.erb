@@ -1,0 +1,33 @@
+<html>
+  <body>
+
+    <% if @user != nil %>
+      <% if @user.errors.any? %>
+      <br>
+    <h6>Oups, nous n'avons pas réussi à éditer ce user pour la (ou les) raison(s) suivante(s) :</h6>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+    <% end %>
+
+    <%= form_tag "/users/#{params[:id]}", method: "put" do %>
+    <br>
+      <h6><%= label_tag 'Prénom' %></h6>
+      <%= text_field_tag 'first_name' %>
+      <br>
+
+      <h6><%= label_tag 'Nom' %></h6>
+      <%= text_area_tag 'last_name' %>
+      <br>
+
+      <h6><%= label_tag 'Description' %></h6>
+      <%= text_area_tag 'description' %>
+      <br>
+
+      <%= submit_tag "Mettre à jour le profil" %>
+    <% end %>
+  </body>
+</html>

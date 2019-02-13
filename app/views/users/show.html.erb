@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col"><h2>Prénom</h2></div>
+    <div class="col"><h2>Nom</h2></div>
+    <div class="col"><h2>Description</h2></div>
+    <div class="col"><h2>Email</h2></div>
+
+    <div class="w-100"></div>
+    <br>
+    <div class="col"><%=@user.first_name%></div>
+    <div class="col"><%= @user.last_name%></div>
+    <div class="col"><%=@user.description %></div>
+    <div class="col"><%=@user.email%> </div>
+  </div>
+</div>
+
+<!-- liste des events du user -->
+<div class="container">
+      <% @events.each do |event| %>
+      <div class="card-deck-wrapper">
+        <div class="card-deck">
+
+          <div class="card bg-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header"><%=event.title %></div>
+            <div class="card-body">
+              <h6 class="card-text">Créé par <%=event.user.first_name %></h6>
+              <p><%= link_to("event link", "/events/#{event.id}") %></p>
+            </div>
+          </div>
+        </div>
+        <%  end  %>
+    </div>
+
+
+<br><br><br>
+<div class="col"><%= link_to("Editer l'user", "/users/#{@user.id}/edit") %></div>
+
+<br><br><br>
+
+<%= button_to "Supprimer l'user", "/users/#{@user.id}", method: :delete %>
