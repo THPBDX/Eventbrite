@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :events, only: [:index, :show, :new]
 
-  get '/home', to: 'event#index'
+  root 'events#index'
 end

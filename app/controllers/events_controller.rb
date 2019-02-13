@@ -2,7 +2,6 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    render '/home'
   end
 
   def new
