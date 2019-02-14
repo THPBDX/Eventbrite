@@ -7,5 +7,6 @@ class ChargesController < ApplicationController
 
 	def create
 	  # Amount in cents
+	 end
 
 end
