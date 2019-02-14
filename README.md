@@ -12,6 +12,8 @@ Bon... On va pas se mentir notre Eventbrite est complètement broken. Malheurese
 
 ___
 
+Lien vers notre site en prod : http://eventreur.herokuapp.com/
+___
 
 ## How to: Les corrections
 
