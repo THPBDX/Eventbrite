@@ -1,23 +1,22 @@
-<br><h2>Sign up</h2>
-<h5><small>Tell us more about yourself</small></h5>
+<br><h2>S'inscrire</h2><br>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="field">
-  <h6><%= f.label :first_name %></h6><br>
+  <h6><%= f.label :first_name %></h6>
   <%= f.text_field :first_name, autofocus: true, autocomplete: "Prénom" %>
 </div><br>
 <div class="field">
-  <h6><%= f.label :last_name %></h6><br>
+  <h6><%= f.label :last_name %></h6>
   <%= f.text_field :last_name, autofocus: true, autocomplete: "Nom" %>
 </div><br>
 <div class="field">
-  <h6><%= f.label :email %></h6><br>
+  <h6><%= f.label :email %></h6>
   <%= f.email_field :email, autofocus: true, autocomplete: "Email" %>
 </div><br>
 <div class="field">
-  <h6><%= f.label :description %></h6><br>
+  <h6><%= f.label :description %></h6>
   <%= f.text_field :description, autofocus: true, autocomplete: "Description" %>
 </div><br>
 <div class="field">
@@ -28,7 +27,7 @@
   <%= f.password_field :password, autocomplete: "Mot de passe" %>
 </div><br>
 <div class="field">
-  <h6><%= f.label :password_confirmation %></h6><br>
+  <h6><%= f.label :password_confirmation %></h6>
   <%= f.password_field :password_confirmation, autocomplete: "Confirmation du mot de passe" %>
 </div><br>
 <div class="actions">

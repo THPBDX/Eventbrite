@@ -5,22 +5,33 @@
 <br>
 
 <body>
-  <h4><%= link_to("➡️ Clic ici pour créer un événement dans ta ville ! ⬅️", "/events/new") %></h4>
+  <h5><%= link_to("➡️ Clique ici pour créer un événement dans ta ville ! ⬅️", "/events/new") %></h5>
   <br><br><br>
   <div class="container">
     <% Event.all.each do |event| %>
-    <div class="card-deck-wrapper">
-      <div class="card-deck">
-        <div class="card bg-secondary mb-3" style="width: 15rem;">
-          <div class="card-header"><%= link_to(event.title, "/events/#{event.id}") %></div>
-          <div class="card-body">
-            <h5 class="card-text"> <%=event.start_date.to_date.strftime('%d, %B, %y')  %></h5>
-            <h6 class="card-text">Créé par <%=event.organiser.first_name %></h6>
-          </div>
-        </div>
-      </div>
-      <%  end  %>
-    </div>
+    <table>
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Durée</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Description</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Lieu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%=@event.start_date%></td>
+        <td><%=@event.duration%></td>
+        <td><%=@event.title %></td>
+        <td><%=@event.description %></td>
+        <td><%=@event.price%> €</td>
+        <td><%=@event.location%></td>
+      </tr>
+    </tbody>
+    <%  end  %>
+    </table>
   </div>
 </body>
 </html>
