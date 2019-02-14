@@ -1,12 +1,14 @@
 class AttendancesController < ApplicationController
 def new
-<<<<<<< HEAD
-  render 'charges/new'
-=======
->>>>>>> master
+
 end
 
 def create
+
+end
+
+def index
+  @event=Event.find(params[:event_id])
 end
 
 end
