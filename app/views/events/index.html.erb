@@ -8,7 +8,7 @@
   <h5><%= link_to("➡️ Clique ici pour créer un événement dans ta ville ! ⬅️", "/events/new") %></h5>
   <br><br><br>
   <div class="container">
-    <% Event.all.each do |event| %>
+
     <table>
     <thead>
       <tr>
@@ -20,14 +20,15 @@
         <th scope="col">Lieu</th>
       </tr>
     </thead>
+      <% Event.all.each do |event| %>
     <tbody>
       <tr>
-        <td><%=@event.start_date%></td>
-        <td><%=@event.duration%></td>
-        <td><%=@event.title %></td>
-        <td><%=@event.description %></td>
-        <td><%=@event.price%> €</td>
-        <td><%=@event.location%></td>
+        <td><%=event.start_date%></td>
+        <td><%=event.duration%></td>
+        <td><%=link_to event.title, "/events/#{event.id}" %></td>
+        <td><%=event.description %></td>
+        <td><%=event.price%> €</td>
+        <td><%=event.location%></td>
       </tr>
     </tbody>
     <%  end  %>
