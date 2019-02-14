@@ -26,7 +26,11 @@
   </div>
 </div>
 
+<br><br><br>
+<%= button_to "Rejoindre l'event", "/participations/new", method: :delete %>
 
 <br><br><br>
 
 <%= button_to "Supprimer l'event", "/events/#{@event.id}", method: :delete %>
+
+<%= button_to "Rejoindre l'event", "/attendances/#{@event.id}", method: :delete %>
